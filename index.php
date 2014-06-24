@@ -77,6 +77,10 @@ if ($core->connect->get_state()) {
 										"group_list" => $core->subjects->group_list,
 										"right_list" => $core->subjects->right_list,
 										"is_admin_access" => $core->subjects->is_admin_access));
+		
+		
+//		print_r($page);exit;
+		
 		$smarty->assign("page",$page);
 		
 		if (isset($_GET['axah'])) {

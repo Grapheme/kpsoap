@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2014-06-24 12:15:49
+<?php /* Smarty version Smarty-3.1.8, created on 2014-06-24 13:04:27
          compiled from "design/client/templates\main.body.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1844353a933b5bbd732-45343794%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'a35172da7eac0ba342c6c604dcd311388858338b' => 
     array (
       0 => 'design/client/templates\\main.body.tpl',
-      1 => 1403596861,
+      1 => 1403600666,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.8',
+  'unifunc' => 'content_53a933b5ca3ef6_24075060',
   'variables' => 
   array (
     'page' => 0,
@@ -25,8 +27,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'subpage' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_53a933b5ca3ef6_24075060',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_53a933b5ca3ef6_24075060')) {function content_53a933b5ca3ef6_24075060($_smarty_tpl) {?><?php  $_config = new Smarty_Internal_Config('global.conf', $_smarty_tpl->smarty, $_smarty_tpl);$_config->loadConfigVars("setup", 'local'); ?>
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru"><head><title><?php if (isset($_smarty_tpl->tpl_vars['page']->value['headers'])){?><?php echo $_smarty_tpl->tpl_vars['page']->value['headers']['title'];?>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2014-06-24 12:48:19
+<?php /* Smarty version Smarty-3.1.8, created on 2014-06-24 13:26:35
          compiled from "design/client/templates\panel.basket-order.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2533053a935041751e0-06572293%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '4b09b893f22125f215efc14175883de89fcb33e6' => 
     array (
       0 => 'design/client/templates\\panel.basket-order.tpl',
-      1 => 1403599582,
+      1 => 1403601994,
       2 => 'file',
     ),
   ),
@@ -77,9 +77,9 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 	<div class="info">Ваша корзина пуста</div>
 	<div class="result <?php if (count($_smarty_tpl->tpl_vars['page']->value['panels_data']['basket'])==0){?>hidden<?php }?>"><span title="Точная сумма заказа будет известна после сборки груза, так мыло режется вручную и вес колеблется. По факту кусок может быть меньше или больше. И счет выставлен будет из расчета стоимости одного грамма мыла.">Предварительная</span> сумма заказа: <span class="price"><?php if (!empty($_smarty_tpl->tpl_vars['page']->value['panels_data']['basket']['price'])){?><?php echo smarty_modifier_regex_replace(number_format($_smarty_tpl->tpl_vars['page']->value['panels_data']['basket']['price'],2,'.',' '),'/\.00/','.―');?>
 <?php }else{ ?>0.―<?php }?></span></div>
-	<div id="CostOfDelivery" class="<?php if (count($_smarty_tpl->tpl_vars['page']->value['panels_data']['basket'])==0){?>hidden<?php }?>">
+	<div id="CostOfDelivery" <?php if (count($_smarty_tpl->tpl_vars['page']->value['panels_data']['basket']['price'])>=2000){?>style="disaplay:none;"<?php }?>>
 		<div class="clear"><!-- --></div>
-		<div class="result">Стоимость доставки: <span class="price-cost-delivery">250</span></div>
+		<div class="result"><span title="При заказе на сумму более 2000 рублей доставка осуществляется бесплатно.">Стоимость</span> доставки: <span class="price-cost-delivery">250</span></div>
 		<div class="clear"><!-- --></div>
 		<div class="result">Итого: <span class="price-with-cost-delivery"><?php echo $_smarty_tpl->tpl_vars['page']->value['panels_data']['basket']['price']+250;?>
 </span></div>

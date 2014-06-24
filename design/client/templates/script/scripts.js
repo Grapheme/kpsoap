@@ -436,6 +436,7 @@ var basket = {
 		this.panels.body.find(".info").text((this.count == 0?"Ваша корзина пуста":"В корзине "+this.count+" "+this.ends(this.count)+":"));
 		if (this.count == 0 && this.panels.body.find(".info").hasClass('hide'))
 			this.panels.body.find(".info").removeClass('hide');
+			this.panels.body.find("#CostOfDelivery").hide();
 		else
 		if (this.count > 0 && !this.panels.body.find(".info").hasClass('hide')) 
 			this.panels.body.find(".info").addClass('hide');

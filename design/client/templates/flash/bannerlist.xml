@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<list autonextin="5000" interval="5000" startframe="1">
+	<banner src="/flash/banners/banner0.swf">
+		<![CDATA[http://www.ya.ru,http://www.r0.ru,http://www.mail.ru,http://www.gmail.ru,http://www.google.ru]]>
+	</banner>
+	<banner src="/flash/banners/banner1.swf">
+		<![CDATA[http://www.ya.ru,http://www.r0.ru,http://www.mail.ru,http://www.gmail.ru,http://www.google.ru]]>
+	</banner>
+	<banner src="/flash/banners/banner2.swf">
+		<![CDATA[http://www.ya.ru,http://www.r0.ru,http://www.mail.ru,http://www.gmail.ru,http://www.google.ru]]>
+	</banner>
+	<banner src="/flash/banners/banner3.swf" price="5000">
+		<![CDATA[http://www.ya.ru,http://www.r0.ru,http://www.mail.ru,http://www.gmail.ru,http://www.google.ru]]>
+	</banner>
+	<banner src="/flash/banners/banner4.swf" price="5000">
+		<![CDATA[http://www.ya.ru,http://www.r0.ru,http://www.mail.ru,http://www.gmail.ru,http://www.google.ru]]>
+	</banner>
+</list>

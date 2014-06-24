@@ -1,0 +1,75 @@
+input,
+textarea,
+label,
+select {
+	font: normal 11px Arial, sans-serif;
+	line-height: 13px;
+	border: 0;
+	outline:none!important;
+}
+body {
+	padding: 0px;
+	margin: 0px;
+	background: #f0f0f0;
+}
+table#auth {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	vertical-align: middle;
+}
+div#authwindow {
+	width: 435px;
+	height: 230px;
+	background: #F0F0F0 url(../images/admin/window.png) no-repeat;
+}
+div#authwindow table {
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width: 344px;
+	empty-cells: show;
+}
+div#authwindow table td {
+	padding: 0 0 0 0;
+	empty-cells: show;
+	text-align: right;
+	vertical-align: bottom;
+}
+input#login {
+	position: relative;
+	border: none;
+	width: 215px;
+	height: 19px;
+}
+td#login {
+	height: 113px;
+}
+input#password {
+	position: relative;
+	border: none;
+	width: 215px;
+	height: 19px;
+}
+td#password {
+	height: 32px;
+}
+input#button {
+	position: relative;
+	font: normal 11px Tahoma;
+	width: 100px;
+	height: 18px;
+	float: right;
+	margin: 0px -1px 1px 0px;
+	border: 1px solid #707070;
+	background: url(../images/button/button.gif) repeat-x center;
+	padding: 0px 0px 0px 0px;
+	cursor: pointer;
+	color: #123;
+}
+td#button {
+	height: 43px;
+}
+form {
+	margin: 0px;
+	padding: 0px;
+}

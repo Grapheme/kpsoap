@@ -1,0 +1,81 @@
+php_flag display_errors Off
+php_value error_reporting 2047
+AddDefaultCharset UTF-8
+Options +FollowSymLinks
+
+php_value upload_max_filesize 20M
+
+ErrorDocument 404 /404/
+
+RewriteEngine on
+# RewriteBase /kpsoap/
+
+RewriteCond %{HTTP_HOST} ^www.xn--80aapvccidefsxn0iya.xn--p1ai$ [OR]
+RewriteCond %{HTTP_HOST} ^xn--80aapvccidefsxn0iya.xn--p1ai$ [OR]
+RewriteCond %{HTTP_HOST} ^www.xn--80aknbelbgadgiog2s.xn--p1ai$ [OR]
+RewriteCond %{HTTP_HOST} ^xn--80aknbelbgadgiog2s.xn--p1ai$ [OR]
+RewriteCond %{HTTP_HOST} ^www.kpsoap.ru$
+RewriteRule ^(.*)$ http://kpsoap.ru/$1 [R=301,L]
+
+RewriteRule ^metrika(|/)$ http://metrika.yandex.ru/stat/?counter_id=21415363 [R]
+
+RewriteRule ^([0-9])\.(jpg|png) $1.$2 [L]
+
+### Œ¡Ÿ≈≈ #########
+RewriteRule ^module/admin/ico.(.*)$ module/admin/ico.$1 [L]
+
+RewriteRule ^design/admin/templates/images/empty.gif$ design/admin/templates/images/empty.gif
+
+RewriteRule ^data/image/(.*)$ data/image/$1 [L]
+RewriteRule ^data/file/(.*)$ data/file/$1 [L]
+
+RewriteRule ^([a-z_A-Z_0-9\-]+)/script/([a-z_A-Z_0-9\-.]+).js$ design/$1/templates/script/$2.js
+RewriteRule ^([a-z_A-Z_0-9\-]+)/script/([a-z_A-Z_0-9\-\.\/]+)$ design/$1/templates/script/$2
+RewriteRule ^([a-z_A-Z_0-9\-]+)/styles/([a-z_A-Z_0-9\-.]+).css$ design/$1/templates/styles/$2.css
+RewriteRule ^([a-z_A-Z_0-9\-]+)/styles/([a-z_A-Z_0-9\-\.\/]+)$ design/$1/templates/styles/$2
+RewriteRule ^([a-z_A-Z_0-9\-]+)/fonts/([a-z_A-Z_0-9\-\.\/]+)$ design/$1/templates/fonts/$2
+RewriteRule ^design/([a-z_A-Z_0-9\-]+)/([a-z_A-Z_0-9\-]+)/([a-z_A-Z_0-9\-\.]+)$ design/$1/templates/$2/$3
+RewriteRule ^([a-z_A-Z_0-9\-]+)/(imgs|images)/([a-z_A-Z_0-9\-\.\/\\]+) design/$1/templates/$2/$3
+RewriteRule ^flash/([a-z_A-Z_0-9\-.\/]+)$ design/client/templates/flash/$1
+
+RewriteRule ^sitemap.xml$ plugins/sitemap.php
+RewriteRule ^yandex.yml$ plugins/yandex.yml.php
+RewriteRule ^banner.xml$ plugins/banner.php
+
+
+### ¿ƒÃ»Õ #########
+
+RewriteRule ^admin(|/|/main)$ http://%{SERVER_NAME}/admin/main/ [R]
+RewriteRule ^admin/$ index.php?admin=true
+RewriteRule ^admin/:(.*)$ index.php?admin=true&$1
+
+RewriteRule ^admin/([a-z_A-Z_0-9\-]+)$ http://%{SERVER_NAME}/admin/$1/ [R]
+RewriteRule ^admin/([a-z_A-Z_0-9\-]+)/$ index.php?admin=true&moduls=$1
+RewriteRule ^admin/([a-z_A-Z_0-9\-]+)/:(.*)$ index.php?admin=true&moduls=$1&$2
+
+RewriteRule ^admin/([a-z_A-Z_0-9\-]+)/([a-z_A-Z_0-9\-]+)$ http://%{SERVER_NAME}/admin/$1/$2/ [R]
+RewriteRule ^admin/([a-z_A-Z_0-9\-]+)/([a-z_A-Z_0-9\-]+)/$ index.php?admin=true&moduls=$1&page=$2
+RewriteRule ^admin/([a-z_A-Z_0-9\-]+)/([a-z_A-Z_0-9\-]+)/:(.*)$ index.php?admin=true&moduls=$1&page=$2&$3
+
+RewriteRule ^admin/([a-z_A-Z_0-9\-]+)/([a-z_A-Z_0-9\-]+)/([a-z_A-Z_0-9\-]+)$ http://%{SERVER_NAME}/admin/$1/$2/$3/ [R]
+RewriteRule ^admin/([a-z_A-Z_0-9\-]+)/([a-z_A-Z_0-9\-]+)/([a-z_A-Z_0-9\-]+)/$ index.php?admin=true&moduls=$1&page=$2&subpage=$3
+RewriteRule ^admin/([a-z_A-Z_0-9\-]+)/([a-z_A-Z_0-9\-]+)/([a-z_A-Z_0-9\-]+)/:(.*)$ index.php?admin=true&moduls=$1&page=$2&subpage=$3&$4
+
+###  À»≈Õ“ ########
+
+RewriteRule ^img-(dbimage|image)/([^'"\s]+)-([\.a-z_A-Z_]+)-([0-9]+[xcv][0-9]+)(|-[0-9]{6}|-[0-9]{10})(|-[0-9]{1,2}x[A-z0-9]{6})(|-[A-z_]+)-([0-9]+)\.([A-z]{3,4}) plugins/getimg.php?src=$1/$2.$3&size=$4&vector=$5&border=$6&mod=$7&quality=$8&format=$9 [L]
+
+
+RewriteRule ^([a-z_A-Z_0-9\-]+)$ http://%{SERVER_NAME}/$1/ [R]
+RewriteRule ^([a-z_A-Z_0-9\-]+)/$ index.php?moduls=$1
+RewriteRule ^\:(.*)$ index.php?$1
+RewriteRule ^([a-z_A-Z_0-9\-]+)/\:(.*)$ index.php?moduls=$1&$2
+#RewriteRule ^([a-z_A-Z_0-9\-]+)/\:page([0-9]{0,5})$ index.php?moduls=$1&page=$2
+
+RewriteRule ^([a-z_A-Z_0-9\-]+)/([^/\.'"]+)$ http://%{SERVER_NAME}/$1/$2/ [R]
+RewriteRule ^([a-z_A-Z_0-9\-]+)/([^/\.'"]+)/$ index.php?moduls=$1&page=$2
+RewriteRule ^([a-z_A-Z_0-9\-]+)/([^/\.'"]+)/\:(.*)$ index.php?moduls=$1&page=$2&$3
+
+RewriteRule ^([a-z_A-Z_0-9\-]+)/([^/\.'"]+)/([^/\s]+)$ http://%{SERVER_NAME}/$1/$2/$3 [R]
+RewriteRule ^([a-z_A-Z_0-9\-]+)/([^/\.'"]+)/([^/\s]+)/$ index.php?moduls=$1&page=$2&subpage=$3
+RewriteRule ^([a-z_A-Z_0-9\-]+)/([^/\.'"]+)/([^/\s]+)/\:(.*)$ index.php?moduls=$1&page=$2&subpage=$3&$4

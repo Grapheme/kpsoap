@@ -1,0 +1,30 @@
+<?php $_config_vars = array (
+  'sections' => 
+  array (
+    'setup' => 
+    array (
+      'vars' => 
+      array (
+        'swfobject' => 'client/script/swfobject.js',
+        'jquery' => 'client/script/jquery.min.js',
+        'jquery_cookies' => 'client/script/jquery.cookie.js',
+        'jquery_base64' => 'client/script/jquery.base64.min.js',
+        'jquery_browser' => 'client/script/jquery.browser.js',
+        'jquery_scrollto' => 'client/script/jquery.scrollTo-min.js',
+        'jquery_color' => 'client/script/jquery.color.js',
+        'jquery_mousewheel' => 'client/script/fancybox/jquery.mousewheel-3.0.2.pack.js',
+        'scripts' => 'client/script/scripts.js?1',
+        'fixpng' => 'client/script/fixpng.js',
+        'fancybox' => 'client/script/fancybox/jquery.fancybox-1.3.1.js',
+        'modernizr' => 'client/script/modernizr.custom.55442.js',
+        'main' => 'client/styles/main.css',
+        'comment' => 'client/styles/comment.css',
+        'for_ie' => 'client/styles/for_ie.css',
+        'css_fancybox' => 'client/script/fancybox/jquery.fancybox-1.3.1.css',
+      ),
+    ),
+  ),
+  'vars' => 
+  array (
+  ),
+); ?>

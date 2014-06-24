@@ -1,0 +1,36 @@
+.main {
+}
+
+.png {
+	_filter: expression(fixpng(this));
+}
+.png-crop {
+	_filter: expression(fixpngCrop(this));
+}
+.png-scale {
+	_filter: expression(fixpngScale(this));
+}
+.cell {
+	_height: 1px;
+	zoom: 1;
+}
+
+/**/
+body .contaner.main {
+	_height: 100%;
+	_width: expression(document.body.clientWidth<1000?"1000px":(ocument.body.clientWidth>1280?1280:"100%"));
+}
+
+.blog .blog_item {
+	zoom: 1;
+}
+
+.products-gallery .motion {
+	position: relative;
+	top: 0;
+	zoom: 1;
+}
+
+#mc-container ul li {
+	zoom: 1;
+}

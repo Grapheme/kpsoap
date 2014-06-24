@@ -1,0 +1,1 @@
+{$page.content.new_id}

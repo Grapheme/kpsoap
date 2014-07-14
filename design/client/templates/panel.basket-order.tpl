@@ -27,7 +27,7 @@
 	</div>
 	<div class="info">Ваша корзина пуста</div>
 	<div class="result {if count($page.panels_data.basket) == 0}hidden{/if}"><span title="Точная сумма заказа будет известна после сборки груза, так мыло режется вручную и вес колеблется. По факту кусок может быть меньше или больше. И счет выставлен будет из расчета стоимости одного грамма мыла.">Предварительная</span> сумма заказа: <span class="price">{if !empty($page.panels_data.basket.price)}{$page.panels_data.basket.price|number_format:2:'.':' '|regex_replace:'/\.00/':'.―'}{else}0.―{/if}</span></div>
-	<div id="CostOfDelivery" {if count($page.panels_data.basket.price) >= 2000}style="disaplay:none;"{/if}>
+	<div class="CostOfDelivery" {if count($page.panels_data.basket.price) >= 2000}style="disaplay:none;"{/if}>
 		<div class="clear"><!-- --></div>
 		<div class="result"><span title="При заказе на сумму более 2000 рублей доставка осуществляется бесплатно.">Стоимость</span> доставки: <span class="price-cost-delivery">250</span></div>
 		<div class="clear"><!-- --></div>

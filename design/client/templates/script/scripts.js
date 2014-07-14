@@ -255,7 +255,7 @@ var basket = {
 			var new_price = Number(price)*Number(new_count);
 			item.find("span").text(new_count+"x");
 			item.find(".basket-price span").text(new_price);
-			
+
 			this.request("basketadd",{"id":id, "count":count});
 			if (typeof(basketEvents.onPlus) != 'undefined' && count>0)
 				basketEvents.onPlus();
@@ -411,14 +411,7 @@ var basket = {
 		При этом сумма выставляемого счита остается неизменной.
 		
 		*/
-		if(price >= 2000){
-			this.panels.body.find("#CostOfDelivery").hide();
-		}else{
-			this.panels.body.find("#CostOfDelivery").show();
-			this.panels.body.find(".price-cost-delivery").text(this.format(250)+" руб");
-			this.panels.body.find(".price-with-cost-delivery").text(this.format(price + 250)+" руб");
-		}
-		
+
 		this.panels.body.find(".result").find("span.price").text(this.format(price)+" руб");
 		this.panels.body.find(".sell").find("span").text(this.sell_val(price)+" %");
 		this.panels.body.find(".total-result").find("span").text(this.format(this.sell_price(price))+" руб");
@@ -433,6 +426,17 @@ var basket = {
 			this.panels.head.find(".price").text(this.format(price));
 			this.panels.head.find(".count").text(this.count);
 		}
+
+        /***************************************************************************/
+        if(price >= 2000){
+            this.panels.body.find(".CostOfDelivery").hide();
+        }else{
+            this.panels.body.find(".CostOfDelivery").show();
+            this.panels.body.find(".price-cost-delivery").text(this.format(250)+" руб");
+            this.panels.body.find(".price-with-cost-delivery").text(this.format(price + 250)+" руб");
+            this.panels.head.find(".price").text(this.format(price + 250));
+        }
+        /***************************************************************************/
 		this.panels.body.find(".info").text((this.count == 0?"Ваша корзина пуста":"В корзине "+this.count+" "+this.ends(this.count)+":"));
 		if (this.count == 0 && this.panels.body.find(".info").hasClass('hide')){
 			this.panels.body.find(".info").removeClass('hide');

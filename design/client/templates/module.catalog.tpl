@@ -19,7 +19,7 @@
 								</select>
 							</div>
 						</div>
-						
+
 						<!--
 						<div class="h1">Каталог не работает?</div>
 						<p>Если у Вас возникли сложности с каталогом или Вы не можете сделать заказ, пожалуйста обратитесь в службу техничесской поддержки с описанием Вашей проблемы.</p><p>Так же по возможности укажите название и версию Вашего браузера, и операционную систему.</p><p><a href="mailto:support@stylewoods.ru">support@stylewoods.ru</a></p>
@@ -40,12 +40,15 @@
 									{if $row.price_sell>0}
 										<span class="price">{$row.price_sell|strrev|regex_replace:"/([0-9][0-9][0-9])/":"\\1 "|strrev|trim|regex_replace:"/(\.[0-9])/":"\\000"} руб</span>
 									{/if}
+                                    {if ($row.count) == 0}
+                                        <div><span class="price">Товар в производстве</span></div>
+                                    {/if}
 								</div>
 							{if ($index+1)%3==0 && $index<47}
 								<div class="clear"></div>
 							{/if}
 		{/foreach}
-	{/if}							
+	{/if}
 								<div class="clear"></div>
 							</div>
 						</div>
@@ -68,7 +71,7 @@
 								{if $page.content.page > 4}
 								<span class="empty">..</span>
 								{/if}
-								
+
 								{if $page.content.page < 4}
 									{assign var="lstart" value="0"}
 								{elseif $page.content.page-4+9 > $page.content.pages}
@@ -76,7 +79,7 @@
 								{else}
 									{assign var="lstart" value="`$page.content.page-4`"}
 								{/if}
-								
+
 								{section name="pages" start="`$lstart`" loop="`$lstart+9`"}
 									{if $smarty.section.pages.index == $page.content.page}
 								<span><span>{$smarty.section.pages.index+1}</span></span>
@@ -84,7 +87,7 @@
 								<a href="/{$SITE_SECTION_NAME}/{if !empty($SITE_SECTION_PAGE)}{$SITE_SECTION_PAGE}/{/if}{if $smarty.section.pages.index>0}:pg={$smarty.section.pages.index}{/if}"><span>{$smarty.section.pages.index+1}</span></a>
 									{/if}
 								{/section}
-								
+
 								{if $lstart+9 < $page.content.pages}
 								<span class="empty">..</span>
 								{/if}

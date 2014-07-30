@@ -40,8 +40,13 @@
 									<span class="button-count dec disable" onselectstart="event.returnValue=false;"><!-- --></span>
 									<div class="clear"><!-- --></div>
 								</div>
-								<span class="button add">В корзину</span>
+                                {if ($page.content.produce.count) > 0}
+                                    <span class="button add">В корзину</span>
+                                {/if}
 							</div>
+                                {if ($page.content.produce.count) == 0}
+                                <div class="weight"><span style="margin-left:20px;">Товар в производстве</span></div>
+                                {/if}
 							{/if}
 						</div>
 						<div class="clear"></div>
@@ -115,5 +120,4 @@
 						{/if}
 					</div>
 					<div class="clear"></div>
-						
-					
+

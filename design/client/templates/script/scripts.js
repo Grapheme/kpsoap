@@ -407,7 +407,7 @@ var basket = {
 		});
 		/*
 		
-		24.06.2014 добавлено условие: если сумма в корзине до 2000 руб то показывать стоимость доставки 250 рублей.
+		30.07.2014 добавлено условие: если сумма в корзине до 2500 руб то показывать стоимость доставки 300 рублей.
 		При этом сумма выставляемого счита остается неизменной.
 		
 		*/
@@ -428,13 +428,13 @@ var basket = {
 		}
 
         /***************************************************************************/
-        if(price >= 2000){
+        if(price >= 2500){
             this.panels.body.find(".CostOfDelivery").hide();
         }else{
             this.panels.body.find(".CostOfDelivery").show();
-            this.panels.body.find(".price-cost-delivery").text(this.format(250)+" руб");
-            this.panels.body.find(".price-with-cost-delivery").text(this.format(price + 250)+" руб");
-            this.panels.head.find(".price").text(this.format(price + 250));
+            this.panels.body.find(".price-cost-delivery").text(this.format(300)+" руб");
+            this.panels.body.find(".price-with-cost-delivery").text(this.format(price + 300)+" руб");
+            this.panels.head.find(".price").text(this.format(price + 300));
         }
         /***************************************************************************/
 		this.panels.body.find(".info").text((this.count == 0?"Ваша корзина пуста":"В корзине "+this.count+" "+this.ends(this.count)+":"));

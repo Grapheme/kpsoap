@@ -2,7 +2,7 @@
 class TDb_Parram {
 	public $server = 'localhost';
 	public $login = 'root';
-	public $password = 'perl03';
+	public $password = ''; //perl03
 	public $db_name = 'kpsoap';
 	
 	public function __construct($server = NULL, $login = NULL, $password = NULL, $db_name = NULL) {

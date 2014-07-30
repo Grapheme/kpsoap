@@ -1,6 +1,8 @@
 .DS_Store
 .idea
-system/objects/core.tdb_parram.php
-design/client/templates_c/*
 data/*
 cache/*
+
+design/admin/templates_c/*
+design/client/templates_c/*
+system/objects/core.tdb_parram.php

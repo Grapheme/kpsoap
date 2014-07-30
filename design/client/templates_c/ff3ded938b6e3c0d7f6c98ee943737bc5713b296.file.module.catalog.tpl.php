@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2014-03-26 16:49:34
+<?php /* Smarty version Smarty-3.1.8, created on 2014-07-14 13:08:45
          compiled from "design/client/templates/module.catalog.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:18239613655332ccde07b283-20597504%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ff3ded938b6e3c0d7f6c98ee943737bc5713b296' => 
     array (
       0 => 'design/client/templates/module.catalog.tpl',
-      1 => 1395827319,
+      1 => 1405328922,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.8',
+  'unifunc' => 'content_5332ccde377f40_40397344',
   'variables' => 
   array (
     'page' => 0,
@@ -25,8 +27,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'lstart' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_5332ccde377f40_40397344',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5332ccde377f40_40397344')) {function content_5332ccde377f40_40397344($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_regex_replace')) include '/var/www/kpsoap.ru/system/smarty/plugins/modifier.regex_replace.php';
 ?>					<div class="line_big"></div>
@@ -68,7 +68,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 								</select>
 							</div>
 						</div>
-						
+
 						<!--
 						<div class="h1">Каталог не работает?</div>
 						<p>Если у Вас возникли сложности с каталогом или Вы не можете сделать заказ, пожалуйста обратитесь в службу техничесской поддержки с описанием Вашей проблемы.</p><p>Так же по возможности укажите название и версию Вашего браузера, и операционную систему.</p><p><a href="mailto:support@stylewoods.ru">support@stylewoods.ru</a></p>
@@ -104,12 +104,15 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 										<span class="price"><?php echo smarty_modifier_regex_replace(trim(strrev(smarty_modifier_regex_replace(strrev($_smarty_tpl->tpl_vars['row']->value['price_sell']),"/([0-9][0-9][0-9])/","\\1 "))),"/(\.[0-9])/","\\000");?>
  руб</span>
 									<?php }?>
+                                    <?php if (($_smarty_tpl->tpl_vars['row']->value['count'])==0){?>
+                                        <div><span class="price">Товар в производстве</span></div>
+                                    <?php }?>
 								</div>
 							<?php if (($_smarty_tpl->tpl_vars['index']->value+1)%3==0&&$_smarty_tpl->tpl_vars['index']->value<47){?>
 								<div class="clear"></div>
 							<?php }?>
 		<?php } ?>
-	<?php }?>							
+	<?php }?>
 								<div class="clear"></div>
 							</div>
 						</div>
@@ -162,7 +165,7 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']["pages"]['last']       = ($_s
 								<?php if ($_smarty_tpl->tpl_vars['page']->value['content']['page']>4){?>
 								<span class="empty">..</span>
 								<?php }?>
-								
+
 								<?php if ($_smarty_tpl->tpl_vars['page']->value['content']['page']<4){?>
 									<?php $_smarty_tpl->tpl_vars["lstart"] = new Smarty_variable("0", null, 0);?>
 								<?php }elseif($_smarty_tpl->tpl_vars['page']->value['content']['page']-4+9>$_smarty_tpl->tpl_vars['page']->value['content']['pages']){?>
@@ -170,7 +173,7 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']["pages"]['last']       = ($_s
 								<?php }else{ ?>
 									<?php $_smarty_tpl->tpl_vars["lstart"] = new Smarty_variable(($_smarty_tpl->tpl_vars['page']->value['content']['page']-4), null, 0);?>
 								<?php }?>
-								
+
 								<?php if (isset($_smarty_tpl->tpl_vars['smarty']->value['section']["pages"])) unset($_smarty_tpl->tpl_vars['smarty']->value['section']["pages"]);
 $_smarty_tpl->tpl_vars['smarty']->value['section']["pages"]['name'] = "pages";
 $_smarty_tpl->tpl_vars['smarty']->value['section']["pages"]['start'] = (int)($_smarty_tpl->tpl_vars['lstart']->value);
@@ -210,7 +213,7 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']["pages"]['last']       = ($_s
 </span></a>
 									<?php }?>
 								<?php endfor; endif; ?>
-								
+
 								<?php if ($_smarty_tpl->tpl_vars['lstart']->value+9<$_smarty_tpl->tpl_vars['page']->value['content']['pages']){?>
 								<span class="empty">..</span>
 								<?php }?>

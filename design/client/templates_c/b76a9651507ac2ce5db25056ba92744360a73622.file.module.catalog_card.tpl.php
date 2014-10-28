@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2014-06-24 12:53:50
+<?php /* Smarty version Smarty-3.1.8, created on 2014-07-15 12:12:35
          compiled from "design/client/templates\module.catalog_card.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2226853a934001f2a09-16480122%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b76a9651507ac2ce5db25056ba92744360a73622' => 
     array (
       0 => 'design/client/templates\\module.catalog_card.tpl',
-      1 => 1403598145,
+      1 => 1405411953,
       2 => 'file',
     ),
   ),
@@ -27,7 +27,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_53a93400384fe4_40170914')) {function content_53a93400384fe4_40170914($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_regex_replace')) include 'E:\\home\\kpsoap\\www\\system\\smarty\\plugins\\modifier.regex_replace.php';
+<?php if ($_valid && !is_callable('content_53a93400384fe4_40170914')) {function content_53a93400384fe4_40170914($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_regex_replace')) include 'Y:\\home\\kpsoap\\www\\system\\smarty\\plugins\\modifier.regex_replace.php';
 ?>					<div class="line_big"></div>
 					<div class="column left">
 <?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['page']->value['submenu_tpl'], $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
@@ -98,8 +98,13 @@ price"><?php echo smarty_modifier_regex_replace(number_format($_smarty_tpl->tpl_
 									<span class="button-count dec disable" onselectstart="event.returnValue=false;"><!-- --></span>
 									<div class="clear"><!-- --></div>
 								</div>
-								<span class="button add">В корзину</span>
+                                <?php if (($_smarty_tpl->tpl_vars['page']->value['content']['produce']['count'])>0){?>
+                                    <span class="button add">В корзину</span>
+                                <?php }?>
 							</div>
+                                <?php if (($_smarty_tpl->tpl_vars['page']->value['content']['produce']['count'])==0){?>
+                                <div class="weight"><span style="margin-left:20px;">Товар в производстве</span></div>
+                                <?php }?>
 							<?php }?>
 						</div>
 						<div class="clear"></div>
@@ -196,5 +201,5 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 						<?php }?>
 					</div>
 					<div class="clear"></div>
-						
-					<?php }} ?>
+
+<?php }} ?>

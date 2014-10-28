@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2014-06-24 13:26:35
+<?php /* Smarty version Smarty-3.1.8, created on 2014-07-30 12:08:35
          compiled from "design/client/templates\panel.basket-order.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2533053a935041751e0-06572293%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '4b09b893f22125f215efc14175883de89fcb33e6' => 
     array (
       0 => 'design/client/templates\\panel.basket-order.tpl',
-      1 => 1403601994,
+      1 => 1406707714,
       2 => 'file',
     ),
   ),
@@ -26,7 +26,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_53a935041f6085_56551870')) {function content_53a935041f6085_56551870($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_regex_replace')) include 'E:\\home\\kpsoap\\www\\system\\smarty\\plugins\\modifier.regex_replace.php';
+<?php if ($_valid && !is_callable('content_53a935041f6085_56551870')) {function content_53a935041f6085_56551870($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_regex_replace')) include 'Y:\\home\\kpsoap\\www\\system\\smarty\\plugins\\modifier.regex_replace.php';
 ?><div class="basket">
 	<div class="count"><?php if (isset($_smarty_tpl->tpl_vars['page']->value['panels_data']['basket']['count'])){?><?php echo $_smarty_tpl->tpl_vars['page']->value['panels_data']['basket']['count'];?>
 <?php }else{ ?>0<?php }?></div>
@@ -77,11 +77,11 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 	<div class="info">Ваша корзина пуста</div>
 	<div class="result <?php if (count($_smarty_tpl->tpl_vars['page']->value['panels_data']['basket'])==0){?>hidden<?php }?>"><span title="Точная сумма заказа будет известна после сборки груза, так мыло режется вручную и вес колеблется. По факту кусок может быть меньше или больше. И счет выставлен будет из расчета стоимости одного грамма мыла.">Предварительная</span> сумма заказа: <span class="price"><?php if (!empty($_smarty_tpl->tpl_vars['page']->value['panels_data']['basket']['price'])){?><?php echo smarty_modifier_regex_replace(number_format($_smarty_tpl->tpl_vars['page']->value['panels_data']['basket']['price'],2,'.',' '),'/\.00/','.―');?>
 <?php }else{ ?>0.―<?php }?></span></div>
-	<div id="CostOfDelivery" <?php if (count($_smarty_tpl->tpl_vars['page']->value['panels_data']['basket']['price'])>=2000){?>style="disaplay:none;"<?php }?>>
+    <div class="CostOfDelivery" <?php if ($_smarty_tpl->tpl_vars['page']->value['panels_data']['basket']['price']>=2500){?>style="disaplay:none;"<?php }?>>
 		<div class="clear"><!-- --></div>
-		<div class="result"><span title="При заказе на сумму более 2000 рублей доставка осуществляется бесплатно.">Стоимость</span> доставки: <span class="price-cost-delivery">250</span></div>
+		<div class="result"><span title="При заказе на сумму более 2500 рублей доставка осуществляется бесплатно.">Стоимость</span> доставки: <span class="price-cost-delivery">250</span></div>
 		<div class="clear"><!-- --></div>
-		<div class="result">Итого: <span class="price-with-cost-delivery"><?php echo $_smarty_tpl->tpl_vars['page']->value['panels_data']['basket']['price']+250;?>
+		<div class="result">Итого: <span class="price-with-cost-delivery"><?php echo $_smarty_tpl->tpl_vars['page']->value['panels_data']['basket']['price']+300;?>
 </span></div>
 	</div>
 	<div class="roller<?php if (($_smarty_tpl->tpl_vars['page']->value['panels_data']['basket']['sell_val']==0)){?> hide<?php }?>">

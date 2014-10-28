@@ -310,8 +310,7 @@ class order_client extends TClientController {
 				$subject=$title;
 
 				$to=array("order@kpsoap.ru", "support@grapheme.ru");
-				$from=array('address' => "order@kpsoap.ru",
-							'name' => "Краснополянское Мыло");
+				$from=array('address' => "order@kpsoap.ru",'name' => "Краснополянское Мыло");
 
 				$message = preg_replace(array('/\{title\}/','/\{order_title\}/','/\{text\}/','/\{order_list\}/','/\{info\}/'), array($title, $order_title, $text, $order_list, $info), $message_template);
 				func::send_mail($from, $to, $subject, $message);

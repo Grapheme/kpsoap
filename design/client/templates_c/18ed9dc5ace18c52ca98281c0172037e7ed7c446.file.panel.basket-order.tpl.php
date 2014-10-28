@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2014-07-14 14:33:30
+<?php /* Smarty version Smarty-3.1.8, created on 2014-07-30 12:55:51
          compiled from "design/client/templates/panel.basket-order.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:301460965333bb83f393d5-51661289%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '18ed9dc5ace18c52ca98281c0172037e7ed7c446' => 
     array (
       0 => 'design/client/templates/panel.basket-order.tpl',
-      1 => 1405333688,
+      1 => 1406710323,
       2 => 'file',
     ),
   ),
@@ -77,11 +77,11 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 	<div class="info">Ваша корзина пуста</div>
 	<div class="result <?php if (count($_smarty_tpl->tpl_vars['page']->value['panels_data']['basket'])==0){?>hidden<?php }?>"><span title="Точная сумма заказа будет известна после сборки груза, так мыло режется вручную и вес колеблется. По факту кусок может быть меньше или больше. И счет выставлен будет из расчета стоимости одного грамма мыла.">Предварительная</span> сумма заказа: <span class="price"><?php if (!empty($_smarty_tpl->tpl_vars['page']->value['panels_data']['basket']['price'])){?><?php echo smarty_modifier_regex_replace(number_format($_smarty_tpl->tpl_vars['page']->value['panels_data']['basket']['price'],2,'.',' '),'/\.00/','.―');?>
 <?php }else{ ?>0.―<?php }?></span></div>
-	<div class="CostOfDelivery" <?php if (count($_smarty_tpl->tpl_vars['page']->value['panels_data']['basket']['price'])>=2000){?>style="disaplay:none;"<?php }?>>
+    <div class="CostOfDelivery" <?php if ($_smarty_tpl->tpl_vars['page']->value['panels_data']['basket']['price']>=2500){?>style="disaplay:none;"<?php }?>>
 		<div class="clear"><!-- --></div>
-		<div class="result"><span title="При заказе на сумму более 2000 рублей доставка осуществляется бесплатно.">Стоимость</span> доставки: <span class="price-cost-delivery">250</span></div>
+		<div class="result"><span title="При заказе на сумму более 2500 рублей доставка осуществляется бесплатно.">Стоимость</span> доставки: <span class="price-cost-delivery">250</span></div>
 		<div class="clear"><!-- --></div>
-		<div class="result">Итого: <span class="price-with-cost-delivery"><?php echo $_smarty_tpl->tpl_vars['page']->value['panels_data']['basket']['price']+250;?>
+		<div class="result">Итого: <span class="price-with-cost-delivery"><?php echo $_smarty_tpl->tpl_vars['page']->value['panels_data']['basket']['price']+300;?>
 </span></div>
 	</div>
 	<div class="roller<?php if (($_smarty_tpl->tpl_vars['page']->value['panels_data']['basket']['sell_val']==0)){?> hide<?php }?>">

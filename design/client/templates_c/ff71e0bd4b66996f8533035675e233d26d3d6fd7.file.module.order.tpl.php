@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2014-07-14 14:33:30
+<?php /* Smarty version Smarty-3.1.8, created on 2014-07-30 13:08:01
          compiled from "design/client/templates/module.order.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:8731799885333996ac25798-04421673%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ff71e0bd4b66996f8533035675e233d26d3d6fd7' => 
     array (
       0 => 'design/client/templates/module.order.tpl',
-      1 => 1405333688,
+      1 => 1406711010,
       2 => 'file',
     ),
   ),
@@ -83,7 +83,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 											<label><input type="radio" value="Банковский перевод" description="" /> Банковский перевод</label>
 											<p>Легко и быстро вы можете оплатить заказ в ближайшем к вам банке вместе с коммунальными платежами. Предварительно Вам необходимо связаться с менеджером и уточнить все детали платежа.</p>
 
-											<!--!!!--><label><input type="radio" value="Robokassa" description="" /> Элекронные деньги</label>
+											<!--!!!--><label><input type="radio" value="Robokassa" description="" /> Электронные деньги</label>
 											<p>Банковские карты, электронная валюта, сервис мобильной коммерции (МТС, Мегафон, Билайн), интернет-банк, банкоматы, терминалы мгновенной оплаты, система денежных переводов Contact, приложение для iOS(iPhone, iPad) / Android.</p><!--/!!!-->
 
 											<label><input type="radio" value="Наложным платежом" description="" /> Наложенным платежом</label>

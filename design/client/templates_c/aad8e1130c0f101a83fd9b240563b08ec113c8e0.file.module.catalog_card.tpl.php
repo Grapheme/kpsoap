@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2014-07-15 12:18:47
+<?php /* Smarty version Smarty-3.1.8, created on 2014-07-30 12:55:38
          compiled from "design/client/templates/module.catalog_card.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:175034715332f523241507-87901246%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'aad8e1130c0f101a83fd9b240563b08ec113c8e0' => 
     array (
       0 => 'design/client/templates/module.catalog_card.tpl',
-      1 => 1405411953,
+      1 => 1406710375,
       2 => 'file',
     ),
   ),

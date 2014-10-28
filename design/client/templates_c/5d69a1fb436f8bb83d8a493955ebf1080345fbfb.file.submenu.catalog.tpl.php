@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2014-06-24 12:15:59
+<?php /* Smarty version Smarty-3.1.8, created on 2014-07-14 12:45:05
          compiled from "design/client/templates\submenu.catalog.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1344053a933bfd138c9-77079917%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5d69a1fb436f8bb83d8a493955ebf1080345fbfb' => 
     array (
       0 => 'design/client/templates\\submenu.catalog.tpl',
-      1 => 1403596861,
+      1 => 1405326875,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.8',
+  'unifunc' => 'content_53a933bfdafcf9_84233191',
   'variables' => 
   array (
     'page' => 0,
@@ -25,10 +27,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'sub' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_53a933bfdafcf9_84233191',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_53a933bfdafcf9_84233191')) {function content_53a933bfdafcf9_84233191($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_regex_replace')) include 'E:\\home\\kpsoap\\www\\system\\smarty\\plugins\\modifier.regex_replace.php';
+<?php if ($_valid && !is_callable('content_53a933bfdafcf9_84233191')) {function content_53a933bfdafcf9_84233191($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_regex_replace')) include 'Y:\\home\\kpsoap\\www\\system\\smarty\\plugins\\modifier.regex_replace.php';
 ?><div class="submenu">
 	<?php  $_smarty_tpl->tpl_vars['row'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['row']->_loop = false;
  $_smarty_tpl->tpl_vars['index'] = new Smarty_Variable;

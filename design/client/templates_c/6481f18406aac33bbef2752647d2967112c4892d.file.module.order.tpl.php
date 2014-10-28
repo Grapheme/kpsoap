@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2014-06-24 12:21:24
+<?php /* Smarty version Smarty-3.1.8, created on 2014-07-31 11:18:01
          compiled from "design/client/templates\module.order.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2201353a9350410f8c1-94567259%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '6481f18406aac33bbef2752647d2967112c4892d' => 
     array (
       0 => 'design/client/templates\\module.order.tpl',
-      1 => 1403596861,
+      1 => 1406710920,
       2 => 'file',
     ),
   ),
@@ -15,13 +15,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.8',
+  'unifunc' => 'content_53a9350416d4e0_62055365',
   'variables' => 
   array (
     'page' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_53a9350416d4e0_62055365',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_53a9350416d4e0_62055365')) {function content_53a9350416d4e0_62055365($_smarty_tpl) {?>					<div class="basket-panel">
 						<div class="top"><!-- --></div>
@@ -81,10 +81,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 										<h4 class="sub">Способ оплаты</h4>
 										<div class="field payment">
 											<label><input type="radio" value="Банковский перевод" description="" /> Банковский перевод</label>
-											<p>Легко и быстро вы можете оплатить заказ в ближайшем к вам банке вместе с коммунальными платежами. Предварительно Вам необходимо связаться с менеджером и уточнить все детали платежа.</p>
+											<p>При выборе этого способа оплаты менеджер вышлет вам номер карты (реквизиты) Сбербанка, на которую вы можете произвести оплату через систему “Сбербанк-онлайн”, банкомат или сделать перевод в ближайшем отделении банка.</p>
 
-											<!--!!!--><label><input type="radio" value="Robokassa" description="" /> Элекронные деньги</label>
-											<p>Банковские карты, электронная валюта, сервис мобильной коммерции (МТС, Мегафон, Билайн), интернет-банк, банкоматы, терминалы мгновенной оплаты, система денежных переводов Contact, приложение для iOS(iPhone, iPad) / Android.</p><!--/!!!-->
+											<!--!!!--><label><input type="radio" value="Robokassa" description="" /> Электронные деньги</label>
+											<p>Банковские карты, электронная валюта, сервис мобильной коммерции (МТС, Мегафон, Билайн), интернет-банк, банкоматы, терминалы мгновенной оплаты, система денежных переводов Contact, приложение для iOS(iPhone, iPad) / Android, Qiwi wallet, Яндекс Деньги, WebMoney, Элекснет, Visa, Mastercard, Альфа-Клик, Евросеть, Связной</p><!--/!!!-->
 
 											<label><input type="radio" value="Наложным платежом" description="" /> Наложенным платежом</label>
 											<p>Оплата наличными при получении на Почте России</p>

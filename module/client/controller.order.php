@@ -212,7 +212,12 @@ class order_client extends TClientController {
 					$price_result += $price = ($produce->cell[$i]['price']*$count);
 					$order_list .= "
 							<tr>
-								<td rowspan=\"4\" width=\"100px\" valign=\"top\"><img src=\"http://{$_SERVER['SERVER_NAME']}/img-dbimage/catalog/{$produce->cell[$i]['group']}/".preg_replace('#\.([a-z]{3}$)#i','-$1',$produce->cell[$i]['photo'])."-100c100-85.jpg\" title=\"{$produce->cell[$i]['title']}\" /></td>
+								<td rowspan=\"4\" width=\"0\" valign=\"top\">
+                                    <!--
+								<td rowspan=\"4\" width=\"100px\" valign=\"top\">
+                                    <img src=\"http://{$_SERVER['SERVER_NAME']}/img-dbimage/catalog/{$produce->cell[$i]['group']}/".preg_replace('#\.([a-z]{3}$)#i','-$1',$produce->cell[$i]['photo'])."-100c100-85.jpg\" title=\"{$produce->cell[$i]['title']}\" />
+                                    -->
+                                </td>
 								<td width=\"400px\"><a href=\"http://{$_SERVER['SERVER_NAME']}/catalog/{$produce->cell[$i]['group']}/{$produce->cell[$i]['article']}/\"><b><font color=\"#005dcd\">{$produce->cell[$i]['title']}</font><b></a></td>
 							</tr>
 							<tr>

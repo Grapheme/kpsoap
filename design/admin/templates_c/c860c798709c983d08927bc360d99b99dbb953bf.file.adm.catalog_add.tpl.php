@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2014-04-15 20:57:18
+<?php /* Smarty version Smarty-3.1.8, created on 2014-10-28 14:07:30
          compiled from "design/admin/templates/adm.catalog_add.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:41364828534d64ee6bbdf4-81787312%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'c860c798709c983d08927bc360d99b99dbb953bf' => 
     array (
       0 => 'design/admin/templates/adm.catalog_add.tpl',
-      1 => 1395827319,
+      1 => 1414490848,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.8',
+  'unifunc' => 'content_534d64ee9d03f1_39412950',
   'variables' => 
   array (
     'SERVER_URL_NAME' => 0,
@@ -29,8 +31,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'weight' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_534d64ee9d03f1_39412950',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_534d64ee9d03f1_39412950')) {function content_534d64ee9d03f1_39412950($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_regex_replace')) include '/var/www/kpsoap.ru/system/smarty/plugins/modifier.regex_replace.php';
 ?><script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['SERVER_URL_NAME']->value;?>
@@ -52,7 +52,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 ?>										<div class="item">											<img src="<?php echo $_smarty_tpl->tpl_vars['row']->value;?>
 " alt="<?php echo $_smarty_tpl->tpl_vars['page']->value['content']['data']['photo'][$_smarty_tpl->tpl_vars['index']->value];?>
 " /><span class="del"><!-- --></span>										</div>											<?php } ?>										<?php }?>									<?php }?>									</div>									<div class="clear"><!-- --></div>								</div>								<input type="button" class="button" value="Добавить" />								<input name="photo" type="hidden" value="" />							</div>														<div id="tst"></div>							<div class="f_title">Артикул <span class="article_alert"></span></div>							<input class="text maxlength:300 width:80%"								   name="article" type="text"								   value="<?php if (isset($_smarty_tpl->tpl_vars['page']->value['content']['data'])){?><?php echo $_smarty_tpl->tpl_vars['page']->value['content']['data']['article'];?>
-<?php }?>" />														<div class="f_title">Название / Название EN (RU)</div>							<input class="text maxlength:300 width:80%"								   name="title" type="text"								   value="<?php if (isset($_smarty_tpl->tpl_vars['page']->value['content']['data'])){?><?php echo $_smarty_tpl->tpl_vars['page']->value['content']['data']['title'];?>
+<?php }?>" />														<div class="f_title">Название / Название EN (RU)</div>							<input class="text maxlength:300 width:80%"								   name="title" type="text"								   value="<?php if (isset($_smarty_tpl->tpl_vars['page']->value['content']['data'])){?><?php echo htmlentities($_smarty_tpl->tpl_vars['page']->value['content']['data']['title']);?>
 <?php }?>" />														<div class="f_title">Подраздел</div>							<select name="subtype" class="display:inline">								<option value="0">Без подраздела</option>							<?php  $_smarty_tpl->tpl_vars['cn_row'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['cn_row']->_loop = false;
  $_smarty_tpl->tpl_vars['cn_index'] = new Smarty_Variable;
  $_from = $_smarty_tpl->tpl_vars['page']->value['content']['subtype']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}

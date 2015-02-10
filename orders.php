@@ -4,7 +4,7 @@ include_once('system/core.php');
 $core = new TCore(NULL);
 if ($core->connect->get_state()) {
 
-    $orders = $core->sql->query("SELECT * FROM `dat_catalog_order` ORDER BY `date` DESC LIMIT 20");
+    $orders = $core->sql->query("SELECT * FROM `dat_catalog_order` ORDER BY `date` DESC LIMIT 30");
     #print_r($orders['cell']);
     #echo "<pre>" . print_r($orders->cell, 1) . "</pre>";
 

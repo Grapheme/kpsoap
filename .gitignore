@@ -2,6 +2,7 @@
 .idea
 data/*
 cache/*
+\!info/*
 
 design/admin/templates_c/*
 design/client/templates_c/*

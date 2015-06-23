@@ -14,22 +14,30 @@ if ($core->connect->get_state()) {
 	
 	if (!isset($_GET['admin'])) {
 		$menu_right = NULL;
+        #var_dump($core->subjects); die;
 		foreach ($core->subjects->right_list as $key => $val)
-			if (preg_match('#(_viewing)#i',$val['alias'])) 
+			if (preg_match('#(_viewing)#i',$val['alias']))
 				$menu_right.= " or `id`={$val['id_site_section']}";
-				
-		$menu = $core->sql->query("
+
+        $query = "
 			SELECT
 				`sys_site_section`.*
 			FROM
 				`sys_site_section`
 			WHERE (
-				`is_show`=1 and (`id`='0'{$menu_right})
+				`is_show`=1 and ((`id`='0'{$menu_right})
+				    OR `id` = 15
+				)
 			)
 			ORDER BY
-				`priority`"
+				`priority`";
+
+        #echo $query; die;
+
+		$menu = $core->sql->query(
+            $query
 		);
-		
+
 		for ($i=0; $i<$menu->num_rows; $i++) {
 			if (!empty($menu->cell[$i]['subpage'])) {
 				$subpage = $core->sql->query("
@@ -50,39 +58,47 @@ if ($core->connect->get_state()) {
 				}
 			}
 		}
-		
+
 		//personal_page
-		
+
 		//$_GET['moduls'] = 'personal';
-		
+
 		if (count($domain = explode('.',$_SERVER['SERVER_NAME']))==3 && !preg_match('/^(demo|www)$/i',$domain[0])) {
 			$_GET['moduls'] = 'personal_client';
-			
+
 		}
-		
+
 		$controller_name = (!empty($_GET['moduls'])?$_GET['moduls']:'index')."_client";
+
+        #echo $controller_name; die;
+        #echo MODULE_DIR.preg_replace('#^([A-z_0-9]*)_(admin|client)#i','\\2/controller.\\1',strtolower($controller_name)).'.php'; die;
+
 		if (file_exists(MODULE_DIR.preg_replace('#^([A-z_0-9]*)_(admin|client)#i','\\2/controller.\\1',strtolower($controller_name)).'.php'))
 			$module = new $controller_name($core);
 		else {
 			$_GET['moduls'] = 'error404';
 			$module = new TClientController($core);
 		}
+        #var_dump($module); die;
 
 		$page = $module->buildPage();
+
+        #var_dump($page); die;
+
 		$core->smarty_init($smarty, true, false, false, 'client');
-		
+
 		$smarty->assign("menu_list",$menu->cell);
 		$smarty->assign("subject",array("auth_state" => $core->subjects->get_authstate(),
 										"info" => $core->subjects->info,
 										"group_list" => $core->subjects->group_list,
 										"right_list" => $core->subjects->right_list,
 										"is_admin_access" => $core->subjects->is_admin_access));
-		
-		
+
+
 //		print_r($page);exit;
-		
+
 		$smarty->assign("page",$page);
-		
+
 		if (isset($_GET['axah'])) {
 			if (strtolower($_GET['axah']) == 'out') {
 				$smarty->display($page['page_tpl']);}

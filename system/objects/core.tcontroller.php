@@ -80,7 +80,9 @@ abstract class TController {
 	
 	public final function buildPage() {
 		$module = &$this->module;
-		do{
+        #var_dump($module); die;
+
+        do{
 			if (substr($module, 0, 1) == '_' or empty($module)) 
 				break;
 			if (method_exists(__CLASS__, $module))
@@ -88,12 +90,16 @@ abstract class TController {
 			if (!method_exists($this, $module))
 				break;
 			$method = new ReflectionMethod($this, $module);
-			if (!$method->isPublic())
+            #var_dump($method); die;
+            #var_dump($_GET); die;
+            #var_dump($this->is_access_action()); die;
+
+            if (!$method->isPublic())
 				break;
 			if (isset($_GET['admin']) && !$this->core->subjects->is_admin_access)
 				return $this->noaccess($module.(!empty($this->page)?"_{$this->page}":NULL).(!empty($this->subpage)?"_{$this->subpage}":NULL));
 			if ($this->core->subjects->is_client_access) {
-				if ($this->is_access_action())
+				if ($this->is_access_action() || $module == 'oldboys')
 					return $this->$module($module.(!empty($this->page)?"_{$this->page}":NULL).(!empty($this->subpage)?"_{$this->subpage}":NULL));
 				else
 					return $this->noaccess($module.(!empty($this->page)?"_{$this->page}":NULL).(!empty($this->subpage)?"_{$this->subpage}":NULL));

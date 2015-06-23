@@ -79,7 +79,7 @@ class TSubjects extends TBase {
 
 	private function get_access(&$is_admin_access, &$is_client_access, &$right_list) {
 		foreach ($right_list as $key => $val)
-			if (preg_match('#(_add)|(_del)|(_edit)|(_ñhoice)#i',$val['alias'])) {
+			if (preg_match('#(_add)|(_del)|(_edit)|(_ï¿½hoice)#i',$val['alias'])) {
 				$is_admin_access = true;
 				break;
 			}

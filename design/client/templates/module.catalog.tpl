@@ -59,9 +59,9 @@
 							{if $page.content.pages <= 10}
 								{section name="pages" loop=$page.content.pages}
 									{if $smarty.section.pages.index == $page.content.page}
-								<span><span>{$smarty.section.pages.index+1}</span></span>
+								        <span><span>{$smarty.section.pages.index+1}</span></span>
 									{else}
-								<a href="/{$SITE_SECTION_NAME}/{if !empty($SITE_SECTION_PAGE)}{$SITE_SECTION_PAGE}/{/if}{if $smarty.section.pages.index>0}:pg={$smarty.section.pages.index}{/if}"><span>{$smarty.section.pages.index+1}</span></a>
+								        <a href="/{$SITE_SECTION_NAME}/{if !empty($SITE_SECTION_PAGE)}{$SITE_SECTION_PAGE}/{/if}{if $smarty.section.pages.index>0}:pg={$smarty.section.pages.index}{/if}"><span>{$smarty.section.pages.index+1}</span></a>
 									{/if}
 								{/section}
 							{else}
